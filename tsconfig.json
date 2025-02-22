@@ -1,0 +1,4 @@
+{
+  "extends": "@classy/typescript-config/base.json"
+}
+

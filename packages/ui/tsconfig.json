@@ -1,0 +1,12 @@
+{
+  "extends": "@classy/typescript-config/react-library.json",
+  "compilerOptions": {
+    //"outDir": "dist"
+    "baseUrl": ".",
+    "paths": {
+      "@classy/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
+}

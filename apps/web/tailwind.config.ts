@@ -1,0 +1,1 @@
+export * from "@classy/ui/tailwind.config";

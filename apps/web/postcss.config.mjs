@@ -1,0 +1,1 @@
+export { default } from "@classy/ui/postcss.config";
