@@ -1,7 +1,8 @@
+'use client'
 import { ComponentPropsWithoutRef } from "react";
-import { Calendar } from "@classy/ui/components/calendar.js";
+import { Calendar } from "@classy/ui/components/calendar";
 import { FieldValues } from "react-hook-form";
-import { FormFieldClassy } from "../field.models.js";
+import { FormFieldClassy } from "@classy/ui/models/index";
 import {
   FormControl,
   FormDescription,
@@ -9,16 +10,16 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@classy/ui/components/form.js";
+} from "@classy/ui/components/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@classy/ui/components/popover.js";
-import { Button } from "@classy/ui/components/button.js";
+} from "@classy/ui/components/popover";
+import { Button } from "@classy/ui/components/button";
 import { CalendarIcon } from "lucide-react";
 import { format } from "date-fns/format";
-import { cn } from "@classy/ui/lib/utils.js";
+import { cn } from "@classy/ui/lib/utils";
 
 type CalendarProps = ComponentPropsWithoutRef<typeof Calendar>;
 

@@ -1,8 +1,8 @@
-"server";
+"next client";
 import { ColumnDef } from "@tanstack/react-table";
-import { DataTable } from "./data-table.js";
-import { useDataTable } from "./hook/use-data-table.js";
-import { DataTableFilterField } from "./types/index.js";
+import { DataTable } from "@classy/ui/components/molecules/data-table/data-table";
+import { DataTableFilterField } from "@classy/ui/models/index";
+import { useDataTable } from "@classy/ui/hooks/use-data-table";
 
 interface TableProps<TData, TValue> {
   filterFields: DataTableFilterField<TData>[];

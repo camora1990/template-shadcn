@@ -1,17 +1,13 @@
-
+"use client";
 import { Button } from "@classy/ui/components/button";
-import {
-  DialogFooter
-} from "@classy/ui/components/dialog";
+import { DialogFooter } from "@classy/ui/components/dialog";
 import { DialogCommon } from "@classy/ui/components/molecules/Dialog/dialog-commond";
 import { ClassyForm } from "@classy/ui/components/molecules/form/classy-form";
 import { CheckboxForm } from "@classy/ui/components/molecules/form/field-form/checkbox-form";
 import { InputForm } from "@classy/ui/components/molecules/form/field-form/input-form";
 import { toast } from "@classy/ui/hooks/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  useForm
-} from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 
 const UserSchema = z.object({
@@ -29,11 +25,7 @@ type UserFormData = z.infer<typeof UserSchema>;
 export const ButtonWithdrawMoney = () => {
   const form = useForm<UserFormData>({
     resolver: zodResolver(UserSchema),
-    defaultValues: {
-      username: "Holi",
-      age: 18,
-      prueba: true,
-    },
+    defaultValues: {},
 
     mode: "all",
   });

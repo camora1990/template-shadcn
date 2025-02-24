@@ -21,16 +21,13 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@classy/ui/components/sidebar";
+import { User } from "../models/nav-main.model.js";
 
-export function NavUser({
-  user,
-}: {
-  user: {
-    name: string;
-    email: string;
-    avatar: string;
-  };
-}) {
+interface NavUserProps {
+  user: User;
+}
+
+export function NavUser({ user }: NavUserProps) {
   const { isMobile } = useSidebar();
 
   return (

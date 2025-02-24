@@ -1,15 +1,16 @@
-"use client";
+
+'use client'
 import { Amount } from "@/components/amount/amount.component";
 import { ButtonDepositMoney } from "@/containers/cash-register-movement/components/modal-deposit-money/modal-deposit-money";
 import { ButtonWithdrawMoney } from "@/containers/cash-register-movement/components/modal-withdraw-money/modal-withdraw-money";
 import { TransactionList } from "@/containers/cash-register-movement/components/transaction-list";
 import { Button } from "@classy/ui/components/button";
 import { SelectField } from "@classy/ui/components/molecules/select-field";
-
-export default function CashRegisterMovementPage() {
+import { Suspense } from "react";
+export const CashRegisterMovement = () => {
   return (
     <>
-      <div className="flex justify-between items-center w-full mb-4 flex-wrap gap-4 sm:justify-center sm:flex-col md:flex-row md:justify-between">
+      <div className="flex justify-center sm:justify-between items-center w-full mb-4 flex-wrap gap-4 sm:flex-col md:flex-row md:justify-between">
         <div className="flex items-center space-x-4">
           <Button className="flex-shrink-0">Cierre de Caja</Button>
           <SelectField
@@ -40,8 +41,10 @@ export default function CashRegisterMovementPage() {
         <ButtonWithdrawMoney />
       </div>
       <div className="overflow-auto borde">
-        <TransactionList />
+        <Suspense fallback={<div>Loading...</div>}>
+          <TransactionList />
+        </Suspense>
       </div>
     </>
   );
-}
+};

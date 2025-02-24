@@ -1,7 +1,7 @@
 "use client";
 
-import * as React from "react";
 import { ChevronsUpDown, Plus } from "lucide-react";
+import * as React from "react";
 
 import {
   DropdownMenu,
@@ -9,7 +9,6 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@classy/ui/components/dropdown-menu";
 import {
@@ -18,9 +17,10 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@classy/ui/components/sidebar";
-import { HeadersMenu } from "../models/nav-main.model.js";
 
-export function HeadersSwitcher({ header }: { header: HeadersMenu }) {
+import { Header } from "@classy/ui/models/nav-main.model";
+import { IconMapper } from "@classy/ui/layout/icon-mapper";
+export function HeadersSwitcher({ header }: { header: Header }) {
   const { isMobile } = useSidebar();
   const [activeTeam, setActiveTeam] = React.useState(header.items[0]);
 
@@ -34,7 +34,7 @@ export function HeadersSwitcher({ header }: { header: HeadersMenu }) {
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
             >
               <div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-                {activeTeam?.logo && <activeTeam.logo className="size-4" />}
+                {activeTeam?.logo && IconMapper({ icon: activeTeam.logo })}
               </div>
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-semibold">
@@ -61,7 +61,7 @@ export function HeadersSwitcher({ header }: { header: HeadersMenu }) {
                 className="gap-2 p-2"
               >
                 <div className="flex size-6 items-center justify-center rounded-sm border">
-                  <team.logo className="size-4 shrink-0" />
+                  {IconMapper({ icon: team.logo })}
                 </div>
                 {team.name}
               </DropdownMenuItem>

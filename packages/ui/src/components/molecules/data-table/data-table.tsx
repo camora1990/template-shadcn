@@ -1,3 +1,4 @@
+'use client'
 import type * as React from "react";
 import { type Table as TanstackTable, flexRender } from "@tanstack/react-table";
 
@@ -12,7 +13,7 @@ import {
 } from "@classy/ui/components/table";
 
 import { cn } from "@classy/ui/lib/utils";
-import { getCommonPinningStyles } from "@classy/ui/lib/data-table.js";
+import { getCommonPinningStyles } from "@classy/ui/lib/data-table";
 
 interface DataTableProps<TData> extends React.HTMLAttributes<HTMLDivElement> {
   /**

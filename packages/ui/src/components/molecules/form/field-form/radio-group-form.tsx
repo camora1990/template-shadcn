@@ -1,3 +1,4 @@
+"use client";
 import { ComponentPropsWithoutRef } from "react";
 import {
   FormControl,
@@ -6,9 +7,9 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@classy/ui/components/form.js";
+} from "@classy/ui/components/form";
 import { RadioGroup, RadioGroupItem } from "@classy/ui/components/radio-group";
-import { FormFieldClassy, Options } from "../field.models.js";
+import { FormFieldClassy, Options } from "@classy/ui/models/index";
 import { FieldValues } from "react-hook-form";
 
 type GroupProps = ComponentPropsWithoutRef<typeof RadioGroup>;

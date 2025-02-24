@@ -18,7 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@classy/ui/components/tooltip";
-import { useIsMobile } from "../hooks/use-mobile.js";
+import { useIsMobile } from "@classy/ui/hooks/use-mobile";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { DialogTitle } from "@radix-ui/react-dialog";
 

@@ -1,7 +1,8 @@
+"use client";
 import { ComponentPropsWithoutRef } from "react";
 import { FieldValues } from "react-hook-form";
-import { FormFieldClassy, Options } from "../field.models.js";
-import { Checkbox } from "@classy/ui/components/checkbox.js";
+import { FormFieldClassy, Options } from "@classy/ui/models/index";
+import { Checkbox } from "@classy/ui/components/checkbox";
 import {
   FormControl,
   FormDescription,
@@ -9,7 +10,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@classy/ui/components/form.js";
+} from "@classy/ui/components/form";
 
 type MultiCheckboxProps = ComponentPropsWithoutRef<typeof Checkbox>;
 

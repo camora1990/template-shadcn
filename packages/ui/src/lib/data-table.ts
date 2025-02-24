@@ -1,15 +1,14 @@
+"use client";
 import React from "react";
 import { Column, Row } from "@tanstack/react-table";
-import { ExtendedSortingState } from "../components/molecules/data-table/types/index.js";
+import { ExtendedSortingState } from "@classy/ui/models/index";
 import { createParser } from "nuqs";
 import { z } from "zod";
 
 export const sortingItemSchema = z.object({
-    id: z.string(),
-    desc: z.boolean(),
-  });
-
-
+  id: z.string(),
+  desc: z.boolean(),
+});
 
 /**
  * Generate common pinning styles for a table column.

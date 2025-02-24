@@ -1,3 +1,4 @@
+"use client";
 import {
   FormControl,
   FormDescription,
@@ -5,12 +6,12 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@classy/ui/components/form.js";
-import { Input } from "@classy/ui/components/input.js";
+} from "@classy/ui/components/form";
+import { Input } from "@classy/ui/components/input";
 import { ComponentPropsWithoutRef } from "react";
 import { FieldValues } from "react-hook-form";
 import { NumericFormat } from "react-number-format";
-import { FormFieldClassy } from "../field.models.js";
+import { FormFieldClassy } from "@classy/ui/models/index";
 
 export type NumericTextFieldProps = ComponentPropsWithoutRef<typeof Input> & {
   allowNegative?: boolean;

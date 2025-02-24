@@ -1,5 +1,3 @@
-import { ThemeProvider } from "@classy/ui/theme/themeProvider";
-
 export default function LoginLayout({
   children,
 }: Readonly<{

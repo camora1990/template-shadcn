@@ -1,8 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 
-import { Toaster } from "@classy/ui/components/toaster";
+import { Providers } from "@/providers/providers";
 import "@classy/ui/globals.css";
-import { ThemeProvider } from "@classy/ui/theme/themeProvider";
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -24,10 +23,7 @@ export default function RootLayout({
       <body
         className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased `}
       >
-        <ThemeProvider>
-          {children}
-          <Toaster />
-        </ThemeProvider>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

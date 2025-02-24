@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button } from "@classy/ui/components/button.js";
+import { Button } from "@classy/ui/components/button";
 import {
   Command,
   CommandEmpty,
@@ -8,7 +8,7 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from "@classy/ui/components/command.js";
+} from "@classy/ui/components/command";
 import {
   FormControl,
   FormDescription,
@@ -16,17 +16,19 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@classy/ui/components/form.js";
+} from "@classy/ui/components/form";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@classy/ui/components/popover.js";
-import { cn } from "@classy/ui/lib/utils.js";
+} from "@classy/ui/components/popover";
+import { cn } from "@classy/ui/lib/utils";
 import { Check, ChevronsUpDown } from "lucide-react";
 import { ComponentPropsWithoutRef } from "react";
 import { FieldValues, Path, PathValue, UseFormSetValue } from "react-hook-form";
-import { FormFieldClassy, Options } from "../field.models.js";
+import { FormFieldClassy, Options } from "@classy/ui/models/index";
+
+
 
 type ComboboxProps = ComponentPropsWithoutRef<typeof Command>;
 
@@ -75,7 +77,7 @@ export const ComboboxForm = <T extends FieldValues>({
             <PopoverTrigger asChild>
               <FormControl>
                 <Button
-                ref={buttonRef}
+                  ref={buttonRef}
                   variant="outline"
                   role="combobox"
                   className={cn(

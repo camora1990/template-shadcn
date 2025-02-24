@@ -1,3 +1,4 @@
+"use client";
 import { Checkbox } from "@classy/ui/components/checkbox";
 import {
   FormControl,
@@ -6,8 +7,9 @@ import {
   FormItem,
   FormLabel,
 } from "@classy/ui/components/form";
+import { FormFieldClassy } from "@classy/ui/models/field.models";
 import { ComponentPropsWithoutRef } from "react";
-import { FormFieldClassy } from "../field.models.js";
+
 import { FieldValues } from "react-hook-form";
 
 type CheckboxProps = ComponentPropsWithoutRef<typeof Checkbox>;

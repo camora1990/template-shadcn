@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@classy/ui/components/button";
-import { DialogClose, DialogFooter } from "@classy/ui/components/dialog";
+import { DialogFooter } from "@classy/ui/components/dialog";
 import {
   FormControl,
   FormField,
@@ -30,11 +30,7 @@ type UserFormData = z.infer<typeof UserSchema>;
 export const ButtonDepositMoney = () => {
   const form = useForm<UserFormData>({
     resolver: zodResolver(UserSchema),
-    defaultValues: {
-      username: "",
-      age: 18,
-    },
-    mode:"all"
+    mode: "all",
   });
 
   const onSubmit = (data: UserFormData) => {
@@ -49,7 +45,6 @@ export const ButtonDepositMoney = () => {
     });
   };
 
-  console.log({ errors: form.formState.errors });
   return (
     <DialogCommon
       title={"Ingresar"}
@@ -64,7 +59,7 @@ export const ButtonDepositMoney = () => {
             <FormItem>
               <FormLabel>Username</FormLabel>
               <FormControl>
-                <Input placeholder="bombre" {...field} />
+                <Input placeholder="nombre" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

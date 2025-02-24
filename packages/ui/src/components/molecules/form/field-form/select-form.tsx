@@ -1,20 +1,21 @@
+"use client";
+import { ComponentPropsWithoutRef } from "react";
 import {
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
-} from "@classy/ui/components/form.js";
+} from "@classy/ui/components/form";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@classy/ui/components/select.js";
-import { ComponentPropsWithoutRef } from "react";
+} from "@classy/ui/components/select";
 import { FieldValues } from "react-hook-form";
-import { FormFieldClassy, Options } from "../field.models.js";
+import { FormFieldClassy, Options } from "@classy/ui/models/index";
 
 type SelectProps = ComponentPropsWithoutRef<typeof Select>;
 

@@ -19,6 +19,10 @@ import {
 } from "@tanstack/react-table";
 
 import {
+  getSortingStateParser,
+  useDebouncedCallback,
+} from "@classy/ui/lib/data-table";
+import {
   type Parser,
   type UseQueryStateOptions,
   parseAsArrayOf,
@@ -30,13 +34,8 @@ import {
 import * as React from "react";
 import {
   DataTableFilterField,
-  ExtendedColumnSort,
   ExtendedSortingState,
-} from "../types/index.js";
-import {
-  getSortingStateParser,
-  useDebouncedCallback,
-} from "@classy/ui/lib/data-table.js";
+} from "@classy/ui/models/index";
 
 interface UseDataTableProps<TData>
   extends Omit<

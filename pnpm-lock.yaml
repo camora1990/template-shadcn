@@ -253,9 +253,6 @@ importers:
       lucide-react:
         specifier: 0.456.0
         version: 0.456.0(react@19.0.0)
-      next:
-        specifier: ^15.1.0
-        version: 15.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       next-themes:
         specifier: ^0.4.4
         version: 0.4.4(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
@@ -300,8 +297,8 @@ importers:
         version: 3.24.1
     devDependencies:
       '@classy/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
+        specifier: F:*
+        version: link:F:/*
       '@classy/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config

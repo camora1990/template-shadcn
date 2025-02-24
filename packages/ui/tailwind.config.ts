@@ -3,11 +3,16 @@ import tailwindcssAnimate from "tailwindcss-animate";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 const config = {
+  mode: "jit",
   darkMode: ["class"],
   content: [
     "app/**/*.{ts,tsx}",
     "components/**/*.{ts,tsx}",
+    "containers/**/*.{ts,tsx}",
+    "apps/web/**/*.{ts,tsx}",
+    "components/**/*.{ts,tsx}",
     "../../packages/ui/src/components/**/*.{ts,tsx}",
+    "../../packages/ui/src/containers/**/*.{ts,tsx}",
     "../../packages/ui/src/layout/**/*.{ts,tsx}",
     "../../packages/ui/src/theme/**/*.{ts,tsx}",
   ],

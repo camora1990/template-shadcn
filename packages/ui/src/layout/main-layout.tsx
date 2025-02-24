@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import { Separator } from "@classy/ui/components/separator";
@@ -6,19 +7,26 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@classy/ui/components/sidebar";
-import { AppMainSidebar } from "@classy/ui/layout/app-main-sidebar.js";
-import { NavMain } from "@classy/ui/models/nav-main.model";
+import { AppMainSidebar } from "@classy/ui/layout/app-main-sidebar";
+import { SidebarModel } from "@classy/ui/models/nav-main.model";
 import { ModeToggle } from "@classy/ui/theme/mode-toggle";
 
 interface MainLayoutProps {
-  navMain: NavMain;
+  navMain: SidebarModel;
   children: React.ReactNode;
 }
 
-export const MainLayout = ({ children }: Readonly<MainLayoutProps>) => {
+export const MainLayout = ({
+  children,
+  navMain,
+}: Readonly<MainLayoutProps>) => {
   return (
     <SidebarProvider>
-      <AppMainSidebar />
+      <AppMainSidebar
+        user={navMain.user}
+        navMain={navMain.navMain}
+        header={navMain.header}
+      />
       <SidebarInset>
         <header className="flex sticky top-0 h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 justify-between px-4 py-2 bg-primary shadow-md">
           <div className="flex items-center gap-2 px- h-full">

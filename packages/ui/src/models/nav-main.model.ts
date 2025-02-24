@@ -1,22 +1,37 @@
-export type NavItem = {
+interface User {
+  name: string;
+  email: string;
+  avatar: string;
+}
+
+interface HeaderItem {
+  name: string;
+  logo: string;
+  plan: string;
+}
+
+interface Header {
+  title: string;
+  items: HeaderItem[];
+}
+
+interface NavItem {
   title: string;
   url: string;
-  isActive?: boolean; // Opcional, ya que no todos los elementos lo tienen
-};
+  icon: string;
+  isActive?: boolean;
+  items: SubNavItem[];
+}
 
-export type NavSection = {
+interface SubNavItem {
   title: string;
   url: string;
-  items: NavItem[];
-};
+}
 
-export type NavMain = NavSection[];
+interface SidebarModel {
+  user: User;
+  header: Header;
+  navMain: NavItem[];
+}
 
-export type HeadersMenu = {
-  title: string;
-  items: {
-    name: string;
-    logo: React.ElementType;
-    plan: string;
-  }[];
-};
+export type { Header, HeaderItem, NavItem, SidebarModel, SubNavItem, User };

@@ -1,6 +1,5 @@
-"use client";
-
-import { ChevronRight, type LucideIcon } from "lucide-react";
+import { NavItem } from "@classy/ui/models/nav-main.model";
+import { ChevronRight, Icon } from "lucide-react";
 
 import {
   Collapsible,
@@ -16,21 +15,13 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@classy/ui/components/sidebar";
+import { IconMapper } from "@classy/ui/layout/icon-mapper";
 
-export function NavMain({
-  items,
-}: {
-  items: {
-    title: string;
-    url: string;
-    icon?: LucideIcon;
-    isActive?: boolean;
-    items?: {
-      title: string;
-      url: string;
-    }[];
-  }[];
-}) {
+interface NavMainProps {
+  items: NavItem[];
+}
+
+export function NavMain({ items }: NavMainProps) {
   return (
     <SidebarGroup>
       <SidebarMenu>
@@ -47,7 +38,7 @@ export function NavMain({
                   className="font-semibold"
                   tooltip={item.title}
                 >
-                  {item.icon && <item.icon />}
+                  {item.icon && IconMapper({ icon: item.icon })}
                   <span>{item.title}</span>
                   <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>

@@ -1,3 +1,5 @@
+"use client";
+import { ComponentPropsWithoutRef } from "react";
 import {
   FormControl,
   FormDescription,
@@ -5,11 +7,10 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@classy/ui/components/form.js";
-import { Textarea } from "@classy/ui/components/textarea.js";
-import { ComponentPropsWithoutRef } from "react";
+} from "@classy/ui/components/form";
+import { Textarea } from "@classy/ui/components/textarea";
 import { FieldValues } from "react-hook-form";
-import { FormFieldClassy } from "../field.models.js";
+import { FormFieldClassy } from "@classy/ui/models/index";
 
 type TextareaProps = ComponentPropsWithoutRef<typeof Textarea>;
 

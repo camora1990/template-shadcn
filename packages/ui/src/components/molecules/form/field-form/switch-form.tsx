@@ -1,14 +1,15 @@
-import { Switch } from "@classy/ui/components/switch.js";
+"use client";
 import { ComponentPropsWithoutRef } from "react";
+import { Switch } from "@classy/ui/components/switch";
 import { FieldValues } from "react-hook-form";
-import { FormFieldClassy } from "@classy/ui/components/molecules/form/field.models.js";
+import { FormFieldClassy } from "@classy/ui/models/field.models";
 import {
   FormControl,
   FormDescription,
   FormField,
   FormItem,
   FormLabel,
-} from "@classy/ui/components/form.js";
+} from "@classy/ui/components/form";
 
 type SwitchProps = ComponentPropsWithoutRef<typeof Switch>;
 
@@ -35,7 +36,11 @@ export const SwitchForm = <T extends FieldValues>({
             {description && <FormDescription>{description}</FormDescription>}
           </div>
           <FormControl>
-            <Switch {...switchProps} checked={field.value} onCheckedChange={field.onChange} />
+            <Switch
+              {...switchProps}
+              checked={field.value}
+              onCheckedChange={field.onChange}
+            />
           </FormControl>
         </FormItem>
       )}
